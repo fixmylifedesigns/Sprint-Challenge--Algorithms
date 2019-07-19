@@ -95,9 +95,30 @@ class SortingRobot:
     def sort(self):
         """
         Sort the robot's list.
+        if its moving right it needs to sort the greater cards to the right
+        turn light on
+        while light is on pick up card
+        if can move right 
+        move right and compare card
+        if card is greater swap
+        and move right and compare
+        if card is less move right
+        cant move right
+        compare card if less switch and move left
+        repeat
+        when compare
+        
         """
-        # Fill this out
-        pass
+        self.set_light_on()
+
+        while self.light_is_on() == True :
+            if self.compare_item() == None :
+                self.swap_item()
+            while self.can_move_right() == True:
+                self.move_right()
+                self.compare_item()
+                if 
+            
 
 
 if __name__ == "__main__":
